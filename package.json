@@ -1,0 +1,44 @@
+{
+  "name": "EvoteIonic",
+  "version": "1.0.0",
+  "description": "the backend for my ionic voting app(mobile)",
+  "main": "server.js",
+  "scripts": {
+    "compile": "tsc --watch",
+    "start": "nodemon dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceAcquahDarko/EvoteIonic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceAcquahDarko/EvoteIonic/issues"
+  },
+  "homepage": "https://github.com/PrinceAcquahDarko/EvoteIonic#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "got": "^11.8.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.14",
+    "node-fetch": "^3.1.0",
+    "pino": "^7.5.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.6",
+    "@types/pino": "^7.0.5",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
