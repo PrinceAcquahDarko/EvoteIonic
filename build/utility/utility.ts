@@ -1,10 +1,10 @@
 import express from 'express'
 import { Api404Error } from '../error/errors'
 import jwt from 'jsonwebtoken'
-
+require("dotenv").config();
 
 export class Utility {
-    secret = 'mySpecial'
+    secret = process.env.SECRET!
     constructor(){this.getID = this.getID.bind(this)}
 
     getID(req: express.Request, res: express.Response, next: express.NextFunction){

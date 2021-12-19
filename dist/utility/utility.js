@@ -6,9 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Utility = void 0;
 const errors_1 = require("../error/errors");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+require("dotenv").config();
 class Utility {
     constructor() {
-        this.secret = 'mySpecial';
+        this.secret = process.env.SECRET;
         this.getID = this.getID.bind(this);
     }
     getID(req, res, next) {
