@@ -18,7 +18,7 @@ class OrgService {
     getOrgs() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield (0, got_1.default)('http://localhost:3000/organization/getallOrgs');
+                const response = yield (0, got_1.default)('https://shrouded-reef-90177.herokuapp.com/organization/getallOrgs');
                 const { body } = response;
                 return JSON.parse(body);
             }
@@ -29,7 +29,7 @@ class OrgService {
     }
     loginUser(id, data) {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `http://localhost:3000/voters/auth?id=${id}`;
+            const url = `https://shrouded-reef-90177.herokuapp.com/voters/auth?id=${id}`;
             console.log(url);
             try {
                 const { body } = yield got_1.default.post(url, {
@@ -48,7 +48,7 @@ class OrgService {
     getAllCandidates(id) {
         return __awaiter(this, void 0, void 0, function* () {
             // 618d4992edb79958bcd4e191
-            const url = `http://localhost:3000/candidates?orgId=${id}`;
+            const url = `https://shrouded-reef-90177.herokuapp.com/candidates?orgId=${id}`;
             try {
                 const res = yield (0, got_1.default)(url);
                 const { body } = res;
@@ -61,7 +61,7 @@ class OrgService {
     }
     getallregVoters(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `http://localhost:3000/voters?orgId=${id}`;
+            const url = `https://shrouded-reef-90177.herokuapp.com/voters?orgId=${id}`;
             try {
                 const res = yield (0, got_1.default)(url);
                 const { body } = res;

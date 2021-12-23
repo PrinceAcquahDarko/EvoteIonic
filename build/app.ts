@@ -2,8 +2,8 @@ import {app} from './server'
 import mongoose from 'mongoose';
 
 import {logError, returnError, isOperationalError} from './error/baseError'
-const PORT = process.env.PORT || 5000
-const url = 'mongodb://localhost/evotes'
+const PORT = process.env.PORT!
+const url = process.env.URL!
 
     mongoose.connect(url).then((data) => {
        console.log('we connected to database')

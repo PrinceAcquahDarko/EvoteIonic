@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = require("./server");
 const mongoose_1 = __importDefault(require("mongoose"));
 const baseError_1 = require("./error/baseError");
-const PORT = process.env.PORT || 5000;
-const url = 'mongodb://localhost/evotes';
+const PORT = process.env.PORT;
+const url = process.env.URL;
 mongoose_1.default.connect(url).then((data) => {
     console.log('we connected to database');
 });

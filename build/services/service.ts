@@ -5,7 +5,7 @@ export class OrgService{
     async getOrgs(){
         try {
 
-            const response = await got('http://localhost:3000/organization/getallOrgs')
+            const response = await got('https://shrouded-reef-90177.herokuapp.com/organization/getallOrgs')
             const {body} = response
             return JSON.parse(body)
 
@@ -15,7 +15,7 @@ export class OrgService{
     }
 
     async loginUser(id: string, data:any){
-        const url = `http://localhost:3000/voters/auth?id=${id}`
+        const url = `https://shrouded-reef-90177.herokuapp.com/voters/auth?id=${id}`
         console.log(url)
         try {
            const {body}: any = await got.post(url,{
@@ -33,7 +33,7 @@ export class OrgService{
     
     async getAllCandidates(id: string){
         // 618d4992edb79958bcd4e191
-        const url = `http://localhost:3000/candidates?orgId=${id}`
+        const url = `https://shrouded-reef-90177.herokuapp.com/candidates?orgId=${id}`
         try {
            
             const res = await got(url)
@@ -49,7 +49,7 @@ export class OrgService{
 
 
     async getallregVoters(id: string){
-        const url = `http://localhost:3000/voters?orgId=${id}`
+        const url = `https://shrouded-reef-90177.herokuapp.com/voters?orgId=${id}`
         try {
            
             const res = await got(url)
